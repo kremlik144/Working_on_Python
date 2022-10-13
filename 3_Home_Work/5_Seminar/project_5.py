@@ -223,5 +223,52 @@ b) Подумайте как наделить бота ""интеллектом"
 
 '''4. Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.'''
 
-print()
+# def mod_1(ss):
+#     ss += ' '
+#     str_code = ''
+#     prev_char = ''
+#     count = 1
+#     for char in ss:
+#         if char != prev_char:
+#             if prev_char:
+#                 if count > 9:
+#                     while count > 9:
+#                         if count % 9 == 0:
+#                             str_code += (str(9) + prev_char) * (count // 9)
+#                             break
+#                         else:
+#                             residue = count % 9
+#                             str_code += (str(9) + prev_char) * (count // 9) + str(residue) + prev_char 
+#                             break  
+#                 else:
+#                     str_code += str(count) + prev_char
+#             count = 1
+#             prev_char = char
+#         else:
+#             count += 1
+#     return str_code
 
+# def mod_2(ss):
+#     index_char = 1
+#     str_decode = ''
+#     for i in range(0 , len(ss), 2):
+#         if  ss[i] in '123456789' and int(ss[i]):
+#             str_decode += ss[index_char] * int(ss[i])
+#             index_char += 2
+#         else: return 'Введите закодированную строку правильно!'
+#     return str_decode
+
+
+# while True:
+#     work_mod = int(input('Выберите режим работы, 1(сжатие) или 2(восстановление): '))
+#     if work_mod == 1:
+#         my_text = input('Введите строку, к которой хотите применить алгоритм:')
+#         print(f'\tИсходная строка = {my_text} \n'
+#               f'\tСжатая строка = {mod_1(my_text)}')
+#         break
+#     elif work_mod == 2:
+#         my_text = input('Введите строку, к которой хотите применить алгоритм:')
+#         print(f'\tИсходная строка = {my_text} \n'
+#               f'\tРаспакованная строка = {mod_2(my_text)}')
+#         break
+#     else: print('Введите корректное значение режима!')
